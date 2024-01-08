@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Survey {{survey.title}} {% endblock %}
+{% block content %}
+<div class="survey">
+    <div class="title_desc">
+        <h2>{{ survey.title }}</h2>
+        <p>{{survey.description}}</p>
+    </div>
+    <form method="post" action="/response/{{survey.id}}">
+        {% for question in survey_form %}
+        <div class="survey_form">
+            <h3>{{ question.question }}</h3>
+            {% if question.choices|length > 1 %}
+                {% for choice in question.choices %}            
+                    <label class="radio">
+                        <input type="radio" name="{{ question.question }}" value="{{ choice }}">
+                        <span class="radio-dot"></span>
+                        {{ choice }}
+                    </label><br>
+                {% endfor %}
+            {% elif question.radio and question.radio|length > 1 %}
+                {% for option in question.radio %}            
+                    <label class="radio">
+                        <input type="radio" name="{{ question.question }}" value="{{ option }}">
+                        <span class="radio-dot"></span>
+                        {{ option }}
+                    </label><br>
+                {% endfor %}
+            {% elif question.checkbox and question.checkbox|length > 1 %}
+                {% for option in question.checkbox %}            
+                    <label class="checkbox">
+                        <input type="checkbox" name='{{ question.question }}{{ loop.index }}' value="{{ option }}">
+                        {{ option }}
+                    </label><br>
+                {% endfor %}
+                <p id="checkbox_tag">Pick multiple answers.</p>
+            {% elif question.date %}          
+                <label class="date_option">
+                    <p>{{ question.date }}:</p>
+                    <input type="date" name='{{ question.question }}'>
+                </label><br>
+            {% elif question.range %}          
+                <label class="range_option">
+                    <input type="range" id="range_input" name='{{ question.question }}' min="{{ question.range[0] }}" max="{{ question.range[1] }}">
+                    <span id="range_value">0</span>
+                </label><br>
+            {% else %}
+                <label class="text">
+                    <input type="text" name="{{question.question}}" placeholder="{{ question.text }}">
+                </label>
+            {% endif %}
+        </div>
+        {% endfor %}
+        <button type="submit">Submit Survey</button>
+    </form>
+    <img src="{{ url_for('static', filename='images/question512.png')}}" alt="background image">
+</div>
+<script>
+    const rangeInput = document.getElementById('range_input');
+    const rangeValueSpan = document.getElementById('range_value');
+
+    rangeInput.addEventListener('input', function() {
+      rangeValueSpan.textContent = rangeInput.value;
+    });
+</script>
+{% endblock %}

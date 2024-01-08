@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %} Survey App {% endblock %}
+{% block content %}
+<div class="generate_link">
+    <div class="generate_link_banner">
+        <h1>Share the survey link.</h1> 
+        <input type="text" id="copyInput1" value="{{ id }}" readonly><button id="copy1">Copy</button>
+        <input type="text" id="copyInput2" value="{{ link }}" readonly><button id="copy2">Copy</button>
+    </div>
+</div>
+<script>
+    document.getElementById("copy1").addEventListener("click", async function() {
+      var copyText = document.getElementById("copyInput1").value;
+
+      try {
+        await navigator.clipboard.writeText(copyText);
+        alert("Text copied to clipboard: " + copyText);
+      } catch (err) {
+        console.error("Unable to copy text to clipboard", err);
+      }
+    });
+
+    document.getElementById("copy2").addEventListener("click", async function() {
+      var copyText = document.getElementById("copyInput2").value;
+
+      try {
+        await navigator.clipboard.writeText(copyText);
+        alert("Text copied to clipboard: " + copyText);
+      } catch (err) {
+        console.error("Unable to copy text to clipboard", err);
+      }
+    });
+</script>
+{% endblock %}

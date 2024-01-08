@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Create Survey{% endblock %}
+{% block content %}
+<div class="create-survey">
+    <div class="banner">
+        <div class="banner_left">
+            <div id="survey_editor">
+                <h2>Survey Editor</h2>
+                <p>Use the in built survey editor to create custom forms.</p>
+                <button>Use editor</button>
+            </div>
+            <div id="upload_json">
+                <h2>Upload JSON</h2>
+                <p>Upload json file to create custom forms. <span>* In development.</span></p>
+                <button>Upload JSON</button>
+            </div>
+        </div>
+        <div class="banner_right">
+            <h2>Templates</h2>
+            <p>Legends: [text, radio, checkbox, date, password, range, ...]</p>
+            <div class="b-r-container">
+                <div id="editor_temp">
+                    <p>question: What is your name? <br>text: None</p>
+                    <p>question: What is your DOB? <br>date: None</p>
+                    <p>question: What is your choice? <br>radio: ['One', 'Two', 'Three' ...]</p>
+                    <p>question: Select multiple: <br>checkbox: ['One', 'Two', 'Three' ...]</p>
+                    <p>question: Volume: <br>range: ['0', '50']</p>
+                    
+                </div>
+                <div id="json_format">
+                    <p>
+                        {<br>
+                            <span class="span1">title: 'Your survey title (max 60 characters)',</span><br>
+                            <span class="span1">description: 'Your survey description (max 240 characters)',</span><br>
+                            <span class="span1">form: [</span><br>
+                            <span class="span2">{<br><span class="span3">question: What is your name?,<br></span><span class="span3">text: None<br></span><span class="span2">},</span></span><br>
+                            <span class="span2">{<br><span class="span3">question: What is your choice?,<br></span><span class="span3"></span> radio: ['One', 'Two', 'Three' ...]<br></span><span class="span2">},</span></span><br>
+                            <span class="span1">],</span><br>
+                        }
+                    </p>
+                </div>
+            </div>
+            <div class='template_button'>
+                <button id="editor_temp_button">Editor</button>
+                <button id="json_temp_button">Json</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="survey_container">
+        <form action="/create_survey" method="post" class="create-form">
+            <div class="title_desc2">
+                <label class="survey_title">Survey Title</label>
+                <input type="text" name="title" id="survey-title" placeholder="Survey Title less than 60 characters">
+                <label class="survey_desc">Description</label>
+                <textarea name="description" id="survey-description" rows="4" cols="50" placeholder="Enter description less than 240 characters"></textarea>
+            </div>
+        
+            <input type="button" id="add-questions" value="+">
+            <input type="button" id="remove-questions" value="-">
+            
+            <input type="submit" value="Create"><br><br>
+        </form>
+    </div>
+    <input type="button" id="show_how" value="Template?">
+</div>
+{% endblock %}

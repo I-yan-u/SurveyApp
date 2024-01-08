@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Thank you! {% endblock %}
+{% block content %}
+<div class="thank_you">
+    <div class="thank_you_banner">
+        <h1>Thank You for Completing the Survey!</h1>
+        <p>Your responses have been received. We appreciate your participation!</p>
+        <button id="view-more">View more</button>
+    </div>
+
+    <div class="thank_you_content">
+        <div class="div_left">
+            <p>
+                Create a new survey quick and easy in a few steps.
+            </p>
+            <button type="button" id="create-survey" name="create-survey"><a href="{{ url_for('create_survey')}}">Create Survey</a></button>
+        </div>
+        <div class="div_right">
+            <p>
+                Respond to an existing survey with an ID or Link.
+            </p>
+            <button type="button" id="visit-survey" name="create-survey"><a href="{{ url_for('index')}}">Visit</a></button>
+        </div>
+    </div>
+    <!-- <h1>You can now  -->
+    <!-- <a href="{{ url_for('logout') }}">Logout</a></h1> -->
+</div>
+{% endblock %}
+

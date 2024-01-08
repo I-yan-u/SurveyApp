@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/question512.png') }}">
+        <link rel="stylesheet" type="text/css" href="../static/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/sign_in_up.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/header.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/home.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/survey.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/thankyou.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/create_survey.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="{{ url_for('static', filename='scripts/create_survey.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/thank_you.js') }}"></script>
+        <script type='module' src="{{ url_for('static', filename='scripts/base.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/auth_page.js') }}"></script>
+        <!-- <script type="module" src="{{ url_for('static', filename='scripts/auth.js') }}"></script> -->
+    </head>
+    <body>
+        <header class="header">
+            <img id="baseicon" src="{{ url_for('static', filename='images/question512.png') }}">
+            <h1><a href="{{ url_for('index') }}">Survey App</a></h1>
+            <img src="{{ url_for('static', filename='images/3lines.png') }}" id="show"> 
+            <img src="{{ url_for('static', filename='images/close.png') }}" id="close"> 
+            <nav class="nav">
+                <a id="home" href="/">Home</a>
+                <a id="about" href="/about">About</a>
+                <a id="create_survey" href="/create_survey">Create survey</a>
+                {% if user %}
+                    <a id="nav_response" href="/responses">Responses</a>
+                    <a id="logout" href="/logout">Log Out</a>
+                {% else %}
+                    <a id="login" href="/login">Log In</a>
+                    <a id="signup" href="/signup">Sign Up</a>
+                {% endif %}
+            </nav>
+        </header>
+        {% block content %}{% endblock %}
+        <script src="" async defer></script>
+        <footer class="footer">
+            <div class="footer-brand">
+                <h3>Survey App</h3>
+            </div>
+
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Create survey</a></li>
+                  <li><a href="#">Response page</a></li>
+                </ul>
+              </div>
+          
+              <div class="footer-contacts">
+                <h3>Contacts</h3>
+                <ul>
+                  <li>surveyapp@surveyapp.com</li>
+                  <li>example@email.com</li>
+                  <li>Phone: +234-801-234-5678</li>
+                </ul>
+              </div>
+        </footer>
+    </body>
+</html>

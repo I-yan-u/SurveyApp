@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<div class="signup">
+    <h3><b>Sign Up</b></h3>
+    <img id="baseicon1" src="{{ url_for('static', filename='images/survey.svg') }}">
+    <article class="signup_body">
+        <form action="/signup" method="post">
+            <input type="text" name="first-name" placeholder="First name" required><br>
+            <input type="text" name="last-name" placeholder="Last name" required><br>
+            <input type="email" name="email" placeholder="email address" required><br>
+            <div class="pass">
+                <input id="inPass" class="acPass" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="pass">
+                <input id="inPass" class="confirmPass" type="password" name="confirm-password" placeholder="Confirm password" required>
+            </div><br>
+
+            <label class="custom-radio">
+                <input type="radio" id="creator-false" name="creator" value="">
+                <span class="radio-dot"></span>
+                No, I do not want to create.
+            </label>
+            <br><br>
+            <label class="custom-radio">
+                <input type="radio" id="creator-true" name="creator" value="True">
+                <span class="radio-dot"></span>
+                Yes, I want to create.
+            </label>
+            <br><br>
+            <input type="submit" value="Sign Up">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <p id="invalid_tag">*{{ messages[0] }}</p>
+                {% endif %}
+            {% endwith %}
+        </form>
+    </article>
+    <article class="l-s-welcome">
+        <div class="l-s-1">
+        </div>
+        <div class="l-s-content">
+            <h2>WELCOME BACK</h2>
+            <p>Sign Up to create a <span>survey</span>, <span>form</span>, <span>questionaire</span> or to participate in any one.</p>
+            <p id="signup">Already have an account? <a href="{{ url_for('login') }}">Sign In</a></p>
+        </div>
+    </article>
+</div>
+{% endblock %}
+
+

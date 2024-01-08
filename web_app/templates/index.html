@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Survey Home{% endblock %}
+{% block content %}
+<div class="index">
+    <div class="index_banner">
+        <h1>Welcome to the Survey App, {{user.first_name}}</h1>
+        <p class="para1 para">
+            Survey app lets you design surveys, questioniares, forms and quizes quickly and reliably. 
+        </p>
+        <p class="para2 para">
+            Easy to use for your target audience. It simplifies designing and building of forms and its variants
+            for Students, Teachers, Organizations, Companies, Churches etc.
+        </p>
+        <form action="/survey" method="post">
+            <input type="text" name="survey-link" id="survey-link" placeholder="Survey ID or link">
+            <input type="submit" value="Visit Survey">
+        </form>
+        <img src="{{ url_for('static', filename='images/question512.png')}}" alt="background image">
+    </div>
+    <div class="index_create">
+        <div class="div_left">
+            <p>
+                Create a new survey quick and easy in a few steps.
+            </p>
+            <button type="button" id="create-survey" name="create-survey"><a href="{{ url_for('create_survey')}}">Create Survey</a></button>
+        </div>
+        <div class="div_right">
+            <img src="{{ url_for('static', filename='images/survey_image.jpeg')}}" alt="create survey image">
+        </div>
+    </div>
+</div>
+{% endblock %}
