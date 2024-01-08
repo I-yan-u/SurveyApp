@@ -1,0 +1,322 @@
+.signup,
+.login {
+    display: block;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    background-color: #5cdb95;
+    padding: 0px;
+}
+
+#baseicon1 {
+    position: absolute;
+    left: 65%;
+    top: 20%;
+    width: 390px;
+    height: 420px;
+    opacity: 0.4;
+    transform: rotate(30deg);
+}
+
+#imageContainer {
+    width: 620px;
+    height: 420px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    border-radius: 5px;
+    box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .changing_images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+  }
+
+
+/* 
+ *
+ * Sign up. Sign up page.
+ *
+ */
+ .signup {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.signup_body {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    margin: 0px 0 0px 5%;
+    padding: 50px 0px;
+    flex-direction: column;
+    border-radius: 3%;
+    justify-content: center;
+}
+
+.signup h3 {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    font-size: 45px;
+    font-weight: bolder;
+    color: #05396b;
+}
+
+.signup_body form{
+    width: 45%;
+    align-self: center;
+    margin: auto 10px;
+}
+
+.signup_body form input[type="email"],
+.signup_body form input[type="text"],
+.signup_body form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 4px auto;
+    border: 2px solid #fff;
+    border-radius: 7px;
+}
+
+.signup_body form input[type="email"]:hover,
+.signup_body form input[type="text"]:hover,
+.signup_body form input[type="password"]:hover{
+    border: 2px solid #389583;
+}
+
+.signup_body form input[type="email"]:focus,
+.signup_body form input[type="text"]:focus,
+.signup_body form input[type="password"]:focus{
+    border: 2px solid #05396b;
+    outline: none;
+}
+
+
+/*
+ *
+ * Log in. Login page
+ *
+ */
+.login {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+ .login_body {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    margin: 0px 0 0px 5%;
+    padding: 50px 0px;
+    flex-direction: column;
+    border-radius: 3%;
+    justify-content: center;
+}
+
+.login_body h3 {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 45px;
+    font-weight: bolder;
+    color: #05396b;
+}
+
+.login_body form{
+    width: 45%;
+    align-self: center;
+    margin: auto 10px;
+}
+
+.login_body form input[type="email"],
+.login_body form input[type="text"],
+.login_body form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.login_body form input[type="email"]:hover,
+.login_body form input[type="text"]:hover,
+.login_body form input[type="password"]:hover{
+    border: 2px solid #389583;
+}
+
+.login_body form input[type="email"]:focus,
+.login_body form input[type="text"]:focus,
+.login_body form input[type="password"]:focus{
+    border: 2px solid #05396b;
+    outline: none;
+}
+
+
+
+
+/* Others */
+/* Hide the default radio button */
+input[type="radio"] {
+    display: none;
+    z-index: 1;
+  }
+  
+/* Style the custom radio button container */
+.custom-radio {
+display: inline-block;
+position: relative;
+padding-left: 30px; /* Adjust as needed */
+cursor: pointer;
+color: #05396b;
+}
+
+/* Style the custom radio button */
+.custom-radio .radio-dot {
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+width: 15px;
+height: 15px;
+border: 2px solid #05396b; /* Change color as needed */
+border-radius: 50%;
+background-color: #fff;
+}
+
+input[type="radio"]:checked + .radio-dot {
+    background-color: #05246b9c; /* Change color as needed */
+}
+
+
+.login_body input[type="submit"],
+.signup_body input[type="submit"] {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #05396b;
+    border: #05396b;
+    border-radius: 20px;
+    color: #A3E7D9;
+}
+
+.login_body input[type="submit"]:hover ,
+.signup_body input[type="submit"]:hover {
+    background-color: #053a6ba7;
+    color: #A3E7D9;
+}
+
+#invalid_tag {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    text-align: center;
+    width: 45vw;
+    color: #fff;
+    padding: 10px 0px;
+    background-color: #379683;
+    border: 1px solid #379683;
+}
+
+
+.l-s-welcome {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #3f5263;
+    width: 55%;
+    justify-content: center;
+    position: relative;
+}
+
+.l-s-1 {
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/loginpageQ.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+}
+
+.l-s-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.l-s-content p,
+.l-s-content h2 {
+    margin: 5px 20px;
+}
+
+.l-s-content p {
+    max-width: 40%;
+    color: #05396b;
+}
+
+.l-s-content p span {
+    font-weight: bolder;
+}
+
+.l-s-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .login h3,
+    .signup h3 {
+        position: relative;
+        /* width: max-width; */
+        left: 0%;
+        text-align: center;
+        margin-top: 20vh;
+    }
+    .signup_body ,
+    .login_body {
+        margin: 0px auto 0px auto;
+    }
+
+    .signup_body form,
+    .login_body form{
+        /* margin-top: 20vh; */
+        height: 80vh;
+        width: 100%;
+        z-index: 1;
+        margin-top: 0px;
+    }
+
+    #baseicon1 {
+        display: none;
+        opacity: 0.2;
+        margin-top: 20vh;
+    }
+
+    .login_body form input[type="email"],
+    .login_body form input[type="text"],
+    .login_body form input[type="password"], 
+    .signup_body form input[type="email"],
+    .signup_body form input[type="text"],
+    .signup_body form input[type="password"] {
+        width: 90%;
+    }
+
+    .login_body input[type="submit"],
+    .signup_body input[type="submit"] {
+        width: 90%;
+    }
+
+    .signup_body form p,
+    .login_body form p {
+        width: 100%;
+        /* margin: 0px auto 0px auto; */
+    }
+}

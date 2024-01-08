@@ -1,0 +1,123 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #5cdb95;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    z-index: 2;
+    width: 100vw;
+    height: 60px;
+}
+
+.header h1 a {
+    text-decoration: none;
+    color: #05396b;
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+header #baseicon {
+    position: absolute;
+    padding-left: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.header #show, 
+.header #close {
+    display: None;
+    position: absolute;
+    right: 4%;
+    height: 40px;
+    width: 40px;
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-content: center;
+    width: 70%;
+    right: 4%;
+    top: 10px;
+    padding: auto 20px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 5px;
+    margin: auto 10px;
+    color: #05396b;
+}
+
+nav a:hover {
+    position: relative;
+    background-color: #8ee4afe2;
+    height: 100%;
+    border-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+}
+
+a#logout {
+    border: 2px solid #05396b;
+    border-radius: 10px;
+}
+
+a#signup {
+    border: 2px solid #05396b;
+    border-radius: 10px;
+}
+
+
+/* 
+/* Responsive layout */
+/*
+*/
+
+@media screen and (max-width: 1000px) {
+    .header {
+        height: 60px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 50px;
+        flex-direction: column;
+        height: 250px;
+        width: 100vw;
+        text-align: left;
+        right: 0%;
+        opacity: 0;
+    }
+
+    nav a {
+        width: fit-content;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    nav a:hover {
+        width: fit-content;
+        height: fit-content;
+        border-radius: 5px;
+    }
+
+    .header #show {
+        display: block;
+    }
+
+    .header #show:hover,
+    .header #close:hover {
+        opacity: 0.7;        
+    }
+
+    .header h1 {
+        position: absolute;
+    }
+}

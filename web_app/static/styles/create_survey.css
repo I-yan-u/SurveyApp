@@ -1,0 +1,279 @@
+.create_survey {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 80vh;
+}
+
+.banner .banner_left {
+    background-color: #5cdb95;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;
+    text-align: center; */
+    height: 80vh;
+    width: 50vw;
+}
+
+.banner .banner_left #survey_editor,
+.banner .banner_left #upload_json {
+    margin: 30px 5%;
+    color: #05386b;
+    max-width: 50%;
+}
+
+.banner_left #survey_editor p,
+.banner_left #upload_json p{
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.banner .banner_left #survey_editor h2, 
+.banner .banner_left #upload_json h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    transition: transform 0.2s ease-in-out;
+}
+
+.banner .banner_left #survey_editor h2:hover, 
+.banner .banner_left #upload_json h2:hover{
+    transform: scale(1.02);
+}
+
+.banner_left #survey_editor button,
+.banner_left #upload_json button{
+    background-color: #05386b;
+    border-radius: 30px;
+    border: 1px solid #05386b;
+    color: #fff;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    transition: transform 0.2s ease-in
+}
+
+.banner_left #survey_editor button:hover ,
+.banner_left #upload_json button:hover {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+.banner .banner_right h2{
+    position: relative;
+    /* left: 25vh; */
+    padding: 20px 30px 0;
+    color: #05386b;
+    font-weight: bold;
+}
+
+.banner .banner_right {
+    background-color: #8de4af;
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    color: #05386b;
+}
+
+.banner_right .b-r-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.banner_right p {
+    padding: 0 30px 20px;
+    font-size: 14px;
+}
+
+.banner_right .b-r-container #editor_temp{
+    display: flex;
+    margin: 20px 20px 20px 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 30px;
+    background-color: #389583;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.banner_right .b-r-container #json_format{
+    display: none;
+    margin: 20px 20px 20px 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color: #389583;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.b-r-container #editor_temp p {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.b-r-container #json_format p {
+    color: #fff;
+    padding: 10px 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.b-r-container #json_format p .span1{
+    padding: 10px 10px 10px 20px;
+}
+.b-r-container #json_format p .span2{
+    padding: 10px 10px 10px 40px;
+}
+.b-r-container #json_format p .span3{
+    padding: 10px 10px 10px 60px;
+}
+
+
+
+
+
+
+/**/
+/* 
+/* SURVEY CONTAINER */
+/* 
+/**/
+
+.questions {
+    margin-bottom: 10px;
+}
+
+.survey_container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height:fit-content;
+    font-size: 18px;
+    color: #05396b;
+    margin: 20px 10vw;
+    margin-bottom: 150px;
+    z-index: 2;
+}
+
+.survey_container .title_desc2,
+.survey_container .questions {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px;
+    background-color: #8ee4afdd;
+    border-radius: 12px;
+    border-left: 2px solid #389583;
+}
+
+.survey_container .title_desc2 {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.survey_container .title_desc2 label,
+.survey_container .questions label {
+    font-weight: bolder;
+    margin: 15px 0px 5px;
+}
+
+
+/**/
+/*
+/* Text boxes and Text areas and Buttons */
+/*
+/**/
+
+.title_desc2 input[type="text"],
+.title_desc2 textarea,
+.questions textarea {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #05396b;
+
+}
+
+.title_desc2 input[type="text"]{
+    height: 30px;
+    width: 50%;
+}
+
+.survey_container input[type="button"] {
+    /* font-size: 24px; */
+    font-weight: bold;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid;
+    color: #8de4af;
+    z-index: 5;
+}
+
+.survey_container #add-questions {
+    background-color: #05386b;
+    border-color: #05386b;
+}
+.survey_container #add-questions:hover {
+    background-color: #05386bcf;
+}
+
+.survey_container #remove-questions {
+    background-color: #b81600;
+    border-color: #b81600;
+}
+.survey_container #remove-questions:hover {
+    background-color: #b81500cd;
+}
+
+.survey_container input[type="submit"] {
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #05386b;
+    color: #8de4af;
+    background-color: #05386b;
+    position: relative;
+    top: 50px;
+    left: -8vw;
+}
+
+.survey_container input[type="submit"]:hover {
+    opacity: 0.7;
+}
+
+#show_how {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    height: 50px;
+    background-color: #05386b;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #3f5263;
+    border-radius: 20px;
+    font-weight: bolder;
+    opacity: 0;
+}
+
+/* .survey_container #show_how {
+    background-color: #b81600;
+    border-color: #b81600;
+    width: fit-content;
+    height: 30px;
+    position: relative;
+    top: 80%;
+    left: 92%;
+}
+.survey_container #show_how:hover {
+    background-color: #b81500cd;
+} */

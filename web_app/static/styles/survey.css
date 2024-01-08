@@ -1,0 +1,257 @@
+.survey {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    font-size: 18px;
+    color: #05396b;
+    margin: 20px 10vw;
+
+}
+
+.survey .title_desc,
+.survey .survey_form {
+    padding: 20px 40px;
+    background-color: #8ee4afdd;
+    border-radius: 12px;
+    border-left: 2px solid #389583;
+}
+
+.survey .title_desc:hover,
+.survey .survey_form:hover {
+    border-left: 3px solid #3f5263;
+}
+
+
+.survey .title_desc {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.survey h2 {
+    margin: 30px auto;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.survey_form {
+    margin-bottom: 10px;
+}
+
+.survey_form h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.survey_form input[type="text"] {
+    /* height: 25px; */
+    width: 50%;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    padding: 10px;
+    color: #05396b;
+}
+
+
+
+/* Radio button */
+.radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Adjust as needed */
+    cursor: pointer;
+    color: #05396b;
+}
+    
+
+.radio .radio-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 2px solid #04325e; /* Change color as needed */
+    border-radius: 50%;
+    background-color: #fff;
+}
+    
+input[type="radio"]:checked + .radio-dot {
+    background-color: #05246bc4; /* Change color as needed */
+}
+
+
+/* Submit button */
+.survey button[type="submit"] {
+    width: 8vw;
+    height: 42px;
+    padding: 10px 10px;
+    margin: 0px 3px;
+    background-color: #05396b;
+    border: #05396b;
+    border-radius: 5px;
+    color: #A3E7D9;
+}
+
+.survey button[type="submit"]:hover {
+    background-color: #053a6ba7;
+    color: #A3E7D9;
+}
+
+
+/* image */
+.survey img{
+    position: absolute;
+    top: 90px;
+    left: -80px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+    .survey button[type="submit"] {
+        width: fit-content;
+    }
+
+    .survey {
+        margin-bottom: 30vh;
+    }
+}
+
+
+
+/* Response page */
+
+.response {
+    height: 150vh;
+    width: 100vw;
+}
+
+.response .response_search {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    background-color: #05386b;
+    color: #fff;
+    text-align: left;
+    justify-content: center;
+}
+
+.response_search h2 {
+    font-size: 40px;
+    margin: 5px;
+    margin-left: 5vw;
+}
+
+.response_search input {
+    width: 20vw;
+    height: 5vh;
+    padding: 5px;
+    border: 1px #04325e;
+    border-radius: 5px;
+    margin: 10px;
+    margin-left: 5vw;
+}
+
+.response_search button {
+    width: 10vw;
+    height: 30px;
+    padding: 5px;
+    background-color: #389583;
+    border: 1px #04325e;
+    border-radius: 5px;
+    margin: 0 10px 10px;
+    margin-left: 5vw;
+}
+
+.response table {
+    width: 90vw;
+    margin: 20px 5vw;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.response table #survey_title {
+    background-color: #3f5263;
+    color: #fff;
+}
+
+tr, th, td {
+    border-bottom: 1px solid #adadad;
+    padding: 15px;
+}
+
+tr:hover {background-color: #D6EEEE;}
+
+.pager {
+    margin: 10px 5vw;
+    display: inline-block;
+}
+
+.pager a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    transition: background-color .5s;
+}
+
+.pager a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pager a.active {
+    background-color: #05386b;
+    color: white;
+  }
+
+  .pager a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .pager a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .modal {
+    display: none;
+    z-index: 2;
+    height: 70vh;
+    width: 50vw;
+    background-color: #151c22;
+    border-radius: 10px;
+    position: fixed;
+    top: 15vh;
+    left: 25vw;
+    opacity: 0;
+  }
+
+  .modal .insert {
+    margin: 10px;
+  }
+
+  .modal .insert p {
+    color: #fff;
+}
+.modal .insert p span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal .insert #answer {
+    font-size: 14px;
+}
+
+  .modal #close {
+    position: absolute;
+    bottom: 15px;
+    text-decoration: none;
+    left: 48%;
+    color: #fff;
+  }

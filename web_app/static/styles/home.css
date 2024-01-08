@@ -1,0 +1,245 @@
+.index {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: visible;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes moveImg {
+    0% {top: 90px; left: -80px;}
+    25% {top: 110px; left: -90px;}
+    50% {top: 80px; left: -70px;}
+    75% {top: 100px; left: -85px;}
+    100% {top: 90px; left: -80px;}
+}
+
+@keyframes moveImg1000 {
+    0% {top: 100px; left: -80px;}
+    25% {top: 110px; left: -90px;}
+    50% {top: 90px; left: -70px;}
+    75% {top: 105px; left: -85px;}
+    100% {top: 100px; left: -80px;}
+}
+
+
+
+/*
+    index_banner
+*/
+.index_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    text-align: center;
+    flex-direction: column;
+    color: #fff;
+    font-weight: bold;
+    background-color: #5cdb95;
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+
+.text-container {
+    max-width: 600px;
+}
+  
+.index_banner h1,
+.index_banner .para {
+    margin-bottom: 8px;
+}
+
+.index_banner h1 {
+    font-weight: bolder;
+}
+
+.index_banner form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 70vw;
+    left: 14.5%;
+    margin: 10px auto;
+    z-index: 1;
+}
+
+.index_banner input[type="submit"] {
+    width: 8vw;
+    height: 42px;
+    padding: 10px 10px;
+    margin: 0px 3px;
+    background-color: #05396b;
+    border: #05396b;
+    border-radius: 5px;
+    color: #A3E7D9;
+}
+
+.index_banner input[type="submit"]:hover {
+    background-color: #053a6ba7;
+    color: #A3E7D9;
+    cursor: pointer;
+}
+
+.index_banner input[type="text"] {
+    width: 30vw;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+
+}
+
+.index_banner img {
+    position: absolute;
+    top: 90px;
+    left: -80px;
+    opacity: 0.2;
+    z-index: 0;
+    animation: moveImg;
+    animation-duration: 3s;
+    animation-delay: -1s;
+    animation-timing-function: ease-out;
+}
+
+
+/*
+    .index_create
+*/
+.index_create {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 80vh;
+    background-color: #379683;
+    text-align: center;
+}
+
+.index_create .div_left {
+    width: 50vw;
+    padding: 30vh 5vw;
+    color: #05396b;
+}
+
+.index_create .div_left p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.index_create .div_left button {
+    position: relative;
+    margin: 20px 0;
+    height: 45px;
+    width: 25vw;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #8de4af;
+    transition: transform 0.2s ease-in-out;
+}
+
+.index_create .div_left button:hover {
+    background-color: #8de4afcc;
+    transform: scale(1.03);
+    cursor: pointer;
+
+}
+
+.div_left button a {
+    text-decoration: none;
+    color: #edf5e1;
+}
+
+.index_create .div_right {
+    overflow: hidden;
+}
+
+.index_create .div_right img{
+    width: 50vw;
+    height: 80vh;
+    opacity: 0.8;
+    transition: transform 0.5s ease-in-out;
+}
+
+.index_create .div_right img:hover {
+    transform: scale(1.03);
+}
+
+
+/* 
+/* Responsive layout */
+/*
+*/
+
+@media screen and (max-width: 1000px) {
+    .index_banner{
+        width: 100vw;
+    }
+
+    .index_banner form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0%;
+        margin-bottom: 20px;
+    }
+
+    .index_banner h1 {
+        font-weight: bold;
+    }
+
+    .index_banner h1,
+    .index_banner .para {
+        width: 85%;
+    }
+
+    .index_banner input[type="text"],
+    .index_banner input[type="submit"] {
+        padding-left: 0%;
+        margin-bottom: 5px;
+    }
+
+    .index_banner input[type="text"] {
+        width: 300px;
+    }
+
+    .index_banner input[type="submit"] {
+        padding: 0px 10px;
+        width: fit-content;
+    }
+
+    .index_banner img {
+        opacity: 0.1;
+        top: 100px;
+        animation: moveImg1000;
+        animation-duration: 3s;
+        animation-delay: -1s;
+        animation-timing-function: ease-out;
+    }
+
+    .index_create {
+        flex-direction: column;
+    }
+    .index_create .div_left {
+        width: 100vw;
+        text-align: center;
+        padding-left: 0%;
+    }
+
+    .index_create .div_left p {
+        width: 100vw;
+    }
+
+    .index_create .div_left button {
+        left: 0%;
+    }
+
+    .index_create .div_right {
+        display: none;
+    }
+}
