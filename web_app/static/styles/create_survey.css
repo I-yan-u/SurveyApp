@@ -86,6 +86,7 @@
 .banner_right .b-r-container {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .banner_right p {
@@ -95,24 +96,28 @@
 
 .banner_right .b-r-container #editor_temp{
     display: flex;
-    margin: 20px 20px 20px 0;
+    margin: 20px 5px 20px 0;
     flex-direction: column;
     justify-content: center;
     padding: 20px 30px;
     background-color: #389583;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    width: 80%;
+    height: 340px;
 }
 
 .banner_right .b-r-container #json_format{
-    display: none;
-    margin: 20px 20px 20px 0;
+    display: flex;
+    margin: 20px 0 20px 5px;
     flex-direction: column;
     justify-content: center;
     padding: 20px 10px;
     background-color: #389583;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 20%;
+    height: 340px;
 }
 
 .b-r-container #editor_temp p {
@@ -127,6 +132,7 @@
     padding: 10px 5px;
     font-size: 16px;
     font-weight: bold;
+    opacity: 0;
 }
 
 .b-r-container #json_format p .span1{
@@ -139,10 +145,34 @@
     padding: 10px 10px 10px 60px;
 }
 
+.template_button {
+    text-align: center;
+}
 
+.template_button button {
+    width: 50px;
+    height: 40px;
+}
 
-
-
+.template_button #editor_temp_button {
+    color: #fff;
+    background-color: #05386b;
+    border: 1px solid #05386b;
+    cursor: pointer;
+    animation: transform 2s ease-in;
+}
+.template_button #json_temp_button {
+    color: #05386b;
+    background-color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    animation: transform 2s ease-in;
+}
+.template_button #json_temp_button:hover, 
+.template_button #editor_temp_button:hover {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
 
 /**/
 /* 
@@ -253,7 +283,7 @@
 
 #show_how {
     position: fixed;
-    bottom: 50px;
+    bottom: calc(30vh + 10px);
     right: 20px;
     height: 50px;
     background-color: #05386b;
