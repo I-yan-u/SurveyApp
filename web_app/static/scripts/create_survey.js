@@ -17,13 +17,37 @@ $(document).ready(() => {
   });
 
   $('#editor_temp_button').on('click', () => {
-    $('#json_format').css({display: 'none'});
-    $('#editor_temp').css({display: 'flex'});
+    $('#editor_temp_button').css({
+      color: '#fff',
+      backgroundColor: '#05386b',
+      border: '1px solid #05386b',
+    });
+    $('#json_temp_button').css({
+      color: '#05386b',
+      backgroundColor: '#fff',
+      border: '1px solid #fff',
+    });
+    $('#json_format p').animate({opacity: '0'}, 500);
+    $('#json_format').animate({width: '20%'}, 1000);
+    $('#editor_temp').animate({width: '80%'}, 1000);
+    $('#editor_temp p').animate({opacity: '1'}, 2000);
   })
 
   $('#json_temp_button').on('click', () => {
-    $('#editor_temp').css({display: 'none'});
-    $('#json_format').css({display: 'flex'});
+    $('#json_temp_button').css({
+      color: '#fff',
+      backgroundColor: '#05386b',
+      border: '1px solid #05386b',
+    });
+    $('#editor_temp_button').css({
+      color: '#05386b',
+      backgroundColor: '#fff',
+      border: '1px solid #fff',
+    });
+    $('#editor_temp p').animate({opacity: '0'}, 500);
+    $('#editor_temp').animate({width: '20%'}, 1000);
+    $('#json_format').animate({width: '80%'}, 1000);
+    $('#json_format p').animate({opacity: '1'}, 2000);
   })
 
   let count = 1;
