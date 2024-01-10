@@ -5,13 +5,14 @@ $(document).ready(() => {
   console.log("Document Title: " + page);
 
   if (page === 'login' || page === 'signup') {
+    $('html').css('backgroundColor', '#5cdb95')
     $('.header').slideUp();
     $('.footer').fadeOut();
   }
 
   // nav dropdown
   $('.header #show').click(() => {
-    $('.header').animate({'height': '180px'}, 1000);
+    $('.header').animate({'height': '220px'}, 1000);
     $('.header .nav').animate({opacity: '1'}, 1000);
     $('.header #show').css({ display: 'none' }).fadeOut('fast');
     $('.header #close').css({ display: 'block' }).fadeIn('slow');
