@@ -80,7 +80,7 @@
     padding: 10px;
     margin: 4px auto;
     border: 2px solid #fff;
-    border-radius: 7px;
+    border-radius: 20px;
 }
 
 .signup_body form input[type="email"]:hover,
@@ -270,10 +270,14 @@ input[type="radio"]:checked + .radio-dot {
     font-weight: bold;
 }
 
+form #signup {
+    display: none;
+}
+
 
 @media screen and (max-width: 1000px) {
-    .login h3,
-    .signup h3 {
+
+    .login h3 {
         position: relative;
         /* width: max-width; */
         left: 0%;
@@ -282,16 +286,18 @@ input[type="radio"]:checked + .radio-dot {
     }
     .signup_body ,
     .login_body {
-        margin: 0px auto 0px auto;
+        width: 100vw;
+        height: 100%;
+        margin: 0px auto 50px auto;
     }
 
     .signup_body form,
     .login_body form{
-        /* margin-top: 20vh; */
-        height: 80vh;
-        width: 100%;
+        /* margin-bottom: 10vh; */
+        height: 100vh;
+        width: 90%;
         z-index: 1;
-        margin-top: 0px;
+        margin: 0px 5%;
     }
 
     #baseicon1 {
@@ -302,15 +308,14 @@ input[type="radio"]:checked + .radio-dot {
 
     .login_body form input[type="email"],
     .login_body form input[type="text"],
-    .login_body form input[type="password"], 
-    .signup_body form input[type="email"],
-    .signup_body form input[type="text"],
-    .signup_body form input[type="password"] {
+    .login_body form input[type="password"] {
+        margin: 0px 5%;
         width: 90%;
     }
 
     .login_body input[type="submit"],
     .signup_body input[type="submit"] {
+        margin: 0px 5%;
         width: 90%;
     }
 
@@ -318,5 +323,39 @@ input[type="radio"]:checked + .radio-dot {
     .login_body form p {
         width: 100%;
         /* margin: 0px auto 0px auto; */
+    }
+
+    .l-s-welcome {
+        display: none;
+    }
+
+    form #signup {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .signup h3 {
+        position: absolute;
+        /* width: max-width; */
+        left: 0%;
+        text-align: center;
+        margin-top: 25vh;
+    }
+
+    .signup_body form input[type="email"],
+    .signup_body form input[type="text"],
+    .signup_body form input[type="password"] { 
+        margin: 5px 5%;
+        width: 90%;
+    }
+
+    /* .signup_body form {
+        margin-top: 5%;
+        margin-bottom: 10%;
+    } */
+
+    .signup_body form label {
+        margin: 0 5%;
     }
 }

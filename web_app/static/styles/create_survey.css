@@ -243,7 +243,7 @@
     font-weight: bold;
     width: 50px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid;
     color: #8de4af;
     z-index: 5;
@@ -268,13 +268,17 @@
 .survey_container input[type="submit"] {
     width: 90px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 2px solid #05386b;
     color: #8de4af;
     background-color: #05386b;
     position: relative;
     top: 50px;
     left: -8vw;
+}
+
+.survey_container #survey-description {
+    padding: 5px;
 }
 
 .survey_container input[type="submit"]:hover {
@@ -293,6 +297,38 @@
     border-radius: 20px;
     font-weight: bolder;
     opacity: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .survey_container {
+        width: 90%;
+        margin: 20px 5% 200px;
+    }
+
+    .create-survey .banner_left {
+        width: 100vw;
+    }
+    .create-survey .banner_right {
+        display: none;
+    }
+
+    .survey_container #survey-title {
+        width: 100%;
+    }
+
+    .survey_container #create_survey-submit {
+        position: relative;
+        left: -13vh;
+        margin-left: 0;
+        border-radius: 20px;
+    }
+
+    #show_how {
+        display: none;
+        position: sticky;
+        bottom: calc(30vh + 2px);
+        width: fit-content;
+    }
 }
 
 /* .survey_container #show_how {
