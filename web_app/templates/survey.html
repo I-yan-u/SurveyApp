@@ -29,7 +29,7 @@
             {% elif question.checkbox and question.checkbox|length > 1 %}
                 {% for option in question.checkbox %}            
                     <label class="checkbox">
-                        <input type="checkbox" name='{{ question.question }}{{ loop.index }}' value="{{ option }}">
+                        <input type="checkbox" name='{{ question.question }} option{{ loop.index }}' value="{{ option }}">
                         {{ option }}
                     </label><br>
                 {% endfor %}
