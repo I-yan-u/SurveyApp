@@ -1,0 +1,7 @@
+survey
+test*
+*pycache*
+id.json
+.gitignore
+.vercel
+vercel*
