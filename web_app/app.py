@@ -117,7 +117,7 @@ def responses():
     if user.creator == False:
         logout()
         flash('Sign Up as a creator!')
-        return redirect(url_for('login'))
+        return redirect(url_for('signup'))
     return render_template('responses.html', user=user)
 
 
@@ -210,7 +210,7 @@ def login():
             response.set_cookie('session_id', session_id)
             return response
         flash('Invalid Email or Password')
-        return render_template("login.html")
+        return render_template("signup.html")
     else:
         session_id = request.cookies.get('session_id')
         user = auth.get_user_from_session(session_id)
