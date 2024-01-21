@@ -8,7 +8,6 @@ from typing import List, Dict
 class Pager:
     """Pager class to paginate a database.
     """
-    DATA_FILE = "0x00-pagination/Popular_Baby_Names.csv"
 
     def __init__(self, response):
         self.__dataset = self.dataset(response)
