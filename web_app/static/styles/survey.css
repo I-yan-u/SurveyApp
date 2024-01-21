@@ -255,3 +255,15 @@ tr:hover {background-color: #D6EEEE;}
     left: 48%;
     color: #fff;
   }
+
+  @media screen and (max-width: 1000px) {
+    
+    .response_search input {
+        width: 70vw;
+    }
+    
+    .response_search button {
+        width: fit-content;
+    }
+
+  }
