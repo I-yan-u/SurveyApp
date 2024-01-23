@@ -1,3 +1,5 @@
+![](web_app/static/images/question512.png)
+
 # Survey App.
 
 SurveyApp is a free online web-app that allows creators in form of organisations, research bodies, students, and individuals to create forms, questionaires and or surveys to be filled by a target audience. The purpose of the app is to develop a user-friendly survey app that simplifies data collection, analysis, and feedback processes, ensuring a seamless and efficient experience for both creators and respondents.
@@ -7,8 +9,12 @@ In today's dynamic landscape, our survey app is essential for organizations and 
 
 With its user-friendly interface, it empowers users to gain valuable insights swiftly and efficiently, driving informed actions and continuous improvement.
 
+> [!NOTE]
+> The app is still under development and some features will be introduce along with updates.
+
 ## ⏯️ Demo ![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 [YouTube Video](https://youtu.be/oDKjCB6itwg)
+
 
 ## 🌐 Live Link 
 [SurveyApp](https://alxsurveyapp.pythonanywhere.com/login)
