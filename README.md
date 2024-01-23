@@ -7,6 +7,14 @@ In today's dynamic landscape, our survey app is essential for organizations and 
 
 With its user-friendly interface, it empowers users to gain valuable insights swiftly and efficiently, driving informed actions and continuous improvement.
 
+## Demo ![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
+[YouTube Video](https://youtu.be/oDKjCB6itwg)
+
+## Live Link
+[SurveyApp](https://alxsurveyapp.pythonanywhere.com/login)
+
+## Future Features
+
 
 ## Tech Stack.
 ### BackEnd
