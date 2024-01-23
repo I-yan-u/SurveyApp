@@ -12,11 +12,11 @@
   - Github: [I-yan-u](https://github.com/I-yan-u)
   - email: [Iyanu Ajimobi](mailto:iyanuajimobi5000@outlook.com)
 - Emmanuel Eduke
-  - 
-  - 
+  - Github: [emmanueleduke](https://github.com/emmanueleduke)
+  - email: [Emmanuel Eduke](mailto:#) 
 - Halima Iyke-Oginah
-  - Github: [masterminds](https://github.com/masterminds)
+  - Github: [mastermind717](https://github.com/mastermind717)
   - email:  
 - Omotunde Johnson
-  - Github - [](https://github.com/I-yan-u)
+  - Github - [](https://github.com/)
   - email 
