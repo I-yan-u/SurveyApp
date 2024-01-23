@@ -7,16 +7,17 @@ In today's dynamic landscape, our survey app is essential for organizations and 
 
 With its user-friendly interface, it empowers users to gain valuable insights swiftly and efficiently, driving informed actions and continuous improvement.
 
-## Demo ![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
+## ⏯️ Demo ![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 [YouTube Video](https://youtu.be/oDKjCB6itwg)
 
-## Live Link
+## 🌐 Live Link 
 [SurveyApp](https://alxsurveyapp.pythonanywhere.com/login)
 
 ## Future Features
+```
+```
 
-
-## Tech Stack.
+## 💻 Tech Stack 
 ### BackEnd
 - Python
 - Flask
@@ -46,7 +47,7 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-## Contributors [?](authors.md)
+## 👥 Contributors [?](authors.md)
 
 ### Iyanu Ajimobi
 - Github: [I-yan-u](https://github.com/I-yan-u)
