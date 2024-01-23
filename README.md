@@ -56,14 +56,14 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 ## 👥 Contributors [?](authors.md)
 
 ### Iyanu Ajimobi
-- [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/I-yan-u)
-- email: [Iyanu Ajimobi](mailto:iyanuajimobi5000@outlook.com)
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/I-yan-u)
+[![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:iyanuajimobi5000@outlook.com)
 ### Emmanuel Eduke
-- Github: [emmanueleduke](https://github.com/emmanueleduke)
-- email: [Emmanuel Eduke](mailto:#) 
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/emmanueleduke)
+[![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:#) 
 ### Halima Iyke-Oginah
-- Github: [mastermind717](https://github.com/mastermind717)
-- email: [Halima Iyke-Oginah](mailto:#)
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mastermind717)
+[![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:#)
 ### Omotunde Johnson
-- Github - [tunlary](https://github.com/#)
-- email: [Omotunde Jonhson](mailto:#)
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/#)
+[![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:#)
