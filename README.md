@@ -17,7 +17,7 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 ## Contributors [?](authors.md)
 
 - Iyanu Ajimobi
-  - Github: [I-yan-u](https://github.com/I-yan-u) ![git](https://github.com/I-yan-u/Github-Profile-Readme-Logos/tree/master/others/git.svg)
+  - Github: [I-yan-u](https://github.com/I-yan-u) ![others/git.svg](https://github.com/I-yan-u/Github-Profile-Readme-Logos/blob/042e36c55d4d757621dedc4f03108213fbb57ec4/others/git.svg)
   - email: [Iyanu Ajimobi](mailto:iyanuajimobi5000@outlook.com)
 - Emmanuel Eduke
   - Github: [emmanueleduke](https://github.com/emmanueleduke) ![git](https://github.com/I-yan-u/Github-Profile-Readme-Logos/tree/master/others/git.svg)
