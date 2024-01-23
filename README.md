@@ -1,5 +1,4 @@
-![question512](https://github.com/I-yan-u/SurveyApp/assets/107860450/94c118da-a204-4e85-b873-29cea2b95dba)
-
+![](https://github.com/I-yan-u/SurveyApp/blob/aab49fbe26c9bde9fd61856a61a9dc827bc2f93d/web_app/static/images/question512.png)
 # Survey App.
 
 SurveyApp is a free online web-app that allows creators in form of organisations, research bodies, students, and individuals to create forms, questionaires and or surveys to be filled by a target audience. The purpose of the app is to develop a user-friendly survey app that simplifies data collection, analysis, and feedback processes, ensuring a seamless and efficient experience for both creators and respondents.
