@@ -20,8 +20,8 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 [SurveyApp](https://alxsurveyapp.pythonanywhere.com/login)
 
 ## Future Features
-```
-```
+- Upload JSON files to create surveys
+- Download Responses as CSV file
 
 ## 💻 Tech Stack 
 ### BackEnd
