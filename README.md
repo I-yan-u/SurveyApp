@@ -16,7 +16,7 @@
   - email: [Emmanuel Eduke](mailto:#) 
 - Halima Iyke-Oginah
   - Github: [mastermind717](https://github.com/mastermind717)
-  - email:  
+  - email: [Halima Iyke-Oginah](mailto:#)
 - Omotunde Johnson
-  - Github - [](https://github.com/)
-  - email 
+  - Github - [tunlary](https://github.com/#)
+  - email: [Omotunde Jonhson](mailto:#)
