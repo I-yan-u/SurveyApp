@@ -6,7 +6,7 @@
 - HTML5, CSS
 - JQuery
 
-## Contributors. 
+## Contributors [#](authors.md)
 
 - Iyanu Ajimobi
   - Github: [I-yan-u](https://github.com/I-yan-u)
