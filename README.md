@@ -56,8 +56,7 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 ## 👥 Contributors [?](authors.md)
 
 ### Iyanu Ajimobi
-- Github: [I-yan-u](https://github.com/I-yan-u)
-  [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/I-yan-u)
+- [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/I-yan-u)
 - email: [Iyanu Ajimobi](mailto:iyanuajimobi5000@outlook.com)
 ### Emmanuel Eduke
 - Github: [emmanueleduke](https://github.com/emmanueleduke)
