@@ -12,6 +12,7 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 ### BackEnd
 - Python
 - Flask
+  ---
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 
@@ -20,6 +21,7 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 - CSS3
 - Javascript
 - JQuery
+
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -27,11 +29,13 @@ With its user-friendly interface, it empowers users to gain valuable insights sw
 
 ### Authentication
 - JWT
+
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 
 ### Database
 - MySQL
 - sqlalchemy
+
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ## Contributors [?](authors.md)
