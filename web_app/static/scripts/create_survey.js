@@ -1,4 +1,10 @@
+import axios from 'https://cdn.skypack.dev/axios';
+
 $(document).ready(() => {
+
+  // token
+  let token = localStorage.getItem('token');
+  token = JSON.parse(token) ? JSON.parse(token) : '';
 
   // Banner slider
   $('.banner_left #survey_editor button').click(() => {
@@ -84,6 +90,50 @@ $(document).ready(() => {
     $(questionId).remove();
   });
 
+  // upload json file
+  const upload_json = async (file) => {
+    const response = await axios({
+      url: '/upload_json',
+      baseURL: 'http://0.0.0.0:5001/api/v1',
+      method: 'post',
+      headers: {
+        'Authorization': `Bearer ${token.token}`,
+      },
+      data: file,
+    });
+    if (response.status === 401) {
+      return { stat: response.status, data: response.data };
+    }
+    return { stat: response.status, data: response.data };
+  }
+
+  // handle upload json event
+  $('#upload_json_btn').on('click', async (event) => {
+    event.preventDefault();
+    const fileInput = document.getElementById('myfile');
+    let file = fileInput.files[0];
+    if (file && file.type === 'application/json') {
+      try {
+        const response = await upload_json(file);
+        if (response.stat === 401) {
+          console.log(response.data);
+          alert('User not logged in or User not a creator');
+        } else {
+          localStorage.setItem('new_survey_link', response.data.survey_id);
+          console.log(response.data);
+        }
+      } catch (error) {
+        alert(error.message);
+      }
+    } else {
+      alert('No file selected or Invalid File type');
+    }
+  });
+
+  $('#myfile').on('change', () => {
+    const fileInput = document.getElementById('myfile');
+    $('#input-file-name').append(fileInput.files[0].name);
+  })
+
 });
 
-//     <input type="text" name=${questionId} class=${questionId} id=question-box placeholder="${placeholder}"><br><br>

@@ -1,5 +1,12 @@
 $(document).ready(() => {
 
+  let user = localStorage.getItem('userData');
+  if (user !== null) {
+    user = JSON.parse(user);
+    $('#user_firstname').append(user.first_name);
+  } else {
+    user = '';
+  }
   let path = window.location.pathname;
   let page = path.split('/').pop();
   console.log("Document Title: " + page);
@@ -8,7 +15,7 @@ $(document).ready(() => {
     $('html').css('backgroundColor', '#5cdb95')
     $('.header').slideUp();
     $('.footer').fadeOut();
-  }
+  } 
 
   // nav dropdown
   $('.header #show').click(() => {
@@ -40,17 +47,5 @@ $(document).ready(() => {
     $('.response_search input').css({position: 'absolute', right: '7vw'});
 
   })
+
 });
-
-
-// const placeActive = (children) => {
-//   children.each(function() {
-//       $(this).click(() => {
-//           // Remove 'active' class from all children
-//           children.removeClass('active');
-          
-//           // Add 'active' class to the clicked element
-//           $(this).addClass('active');
-//       });
-//   });
-// };

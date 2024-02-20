@@ -17,11 +17,14 @@
         <link rel="stylesheet" type="text/css" href="../static/styles/create_survey.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="{{ url_for('static', filename='scripts/create_survey.js') }}"></script>
-        <script src="{{ url_for('static', filename='scripts/thank_you.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='scripts/auth.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='scripts/auth_page.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='scripts/create_survey.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='scripts/search_survey.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='scripts/create_user.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='scripts/thank_you.js') }}"></script>
         <script type='module' src="{{ url_for('static', filename='scripts/base.js') }}"></script>
-        <script src="{{ url_for('static', filename='scripts/auth_page.js') }}"></script>
-        <!-- <script type="module" src="{{ url_for('static', filename='scripts/auth.js') }}"></script> -->
+        <script type='module' src="{{ url_for('static', filename='scripts/responses.js') }}"></script>
     </head>
     <body>
         <header class="header">
@@ -33,16 +36,19 @@
                 <a id="home" href="/">Home</a>
                 <a id="about" href="/about">About</a>
                 <a id="create_survey" href="/create_survey">Create survey</a>
-                {% if user %}
-                    <a id="nav_response" href="/responses">Responses</a>
-                    <a id="logout" href="/logout">Log Out</a>
-                {% else %}
-                    <a id="login" href="/login">Log In</a>
-                    <a id="signup" href="/signup">Sign Up</a>
-                {% endif %}
+                <a id="nav_response" href="/responses">Responses</a>
+                <a id="logout" onclick="logout()" class="logout" href="#">Log Out</a>
             </nav>
         </header>
         {% block content %}{% endblock %}
+        <script>
+          function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('userData');
+            localStorage.removeItem('survey');
+            window.location.href = '/login';
+          }
+        </script>
         <script src="" async defer></script>
         <footer class="footer">
             <div class="footer-brand">

@@ -174,6 +174,56 @@
     transform: scale(0.95);
 }
 
+/* input[type="file"] {
+    background-color: #05386b;
+} */
+
+.file_input {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    animation: transform 2s ease-in;
+  }
+  
+  .file_input input[type="file"] {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    animation: transform 2s ease-in;
+  }
+  
+  .file_input button {
+    display: inline-block;
+    background-color: #05386b;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    z-index: 10;
+    animation: transform 2s ease-in;
+  }
+
+  .file_input button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.file_input:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.file_input #input-file-name {
+    width: fit-content;
+    color: #05386b;
+    font-weight: bold;
+}
+
 /**/
 /* 
 /* SURVEY CONTAINER */
