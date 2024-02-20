@@ -5,17 +5,15 @@
     <article class="login_body">
         <h3><b>Log In</b></h3>
         <form action="/login" method="post">
-            <input type="email" id="login_email" name="email" placeholder="exprecn@something.com" required><br><br>
+            <input type="email" id="login_email" name="email" placeholder="something@surveyapp.com" required><br><br>
             <div class="pass">
                 <input id="inPass" type="password" name="password" placeholder="Password" required>
+                <img class="show_hide" id="show_hideL" src="{{ url_for('static', filename='images/show.svg') }}">
+                <img class="hide_show" id="hide_showL" src="{{ url_for('static', filename='images/hide.svg') }}">
             </div><br>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <p id="invalid_tag">*{{ messages[0] }}</p>
-                {% endif %}
-            {% endwith %}
+            <p id="invalid_tag">*Invalid Email or Password</p>
             <input id="login_submit" type="submit" value="Login">
-            <p id="signup">Don't have an account? <a href="{{ url_for('signup') }}">Create one</a></p>
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </form>
     </article>
     <article class="l-s-welcome">

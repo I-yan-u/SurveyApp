@@ -3,7 +3,7 @@
 {% block content %}
 <div class="index">
     <div class="index_banner">
-        <h1>Welcome to the Survey App, {{user.first_name}}</h1>
+        <h1>Welcome to the Survey App, <span id="user_firstname"></span></h1>
         <p class="para1 para">
             Survey app lets you design surveys, questioniares, forms and quizes quickly and reliably. 
         </p>
@@ -11,9 +11,10 @@
             Easy to use for your target audience. It simplifies designing and building of forms and its variants
             for Students, Teachers, Organizations, Companies, Churches etc.
         </p>
-        <form action="/survey" method="post">
+        <form action="#" method="get">
             <input type="text" name="survey-link" id="survey-link" placeholder="Survey ID or link">
-            <input type="submit" value="Visit Survey">
+            <input class="search_survey" type="submit" value="Visit Survey">
+            <div class="s-lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </form>
         <img src="{{ url_for('static', filename='images/question512.png')}}" alt="background image">
     </div>
@@ -30,3 +31,9 @@
     </div>
 </div>
 {% endblock %}
+
+<!--        <form action="#/survey" method="post">
+            <input type="text" name="survey-link" id="survey-link" placeholder="Survey ID or link">
+            <input id="search_survey" type="submit" value="Visit Survey">
+ -->
+ <!-- action="#" -->

@@ -10,9 +10,16 @@
                 <button>Use editor</button>
             </div>
             <div id="upload_json">
-                <h2>Upload JSON</h2>
-                <p>Upload json file to create custom forms. <span>* In development.</span></p>
-                <button>Upload JSON</button>
+                <form>
+                    <h2>Upload JSON</h2>
+                    <p>Upload json file to create custom forms.</p>
+                    <div class="file_input">
+                        <input type="file" id="myfile" name="myfile" accept=".json">
+                        <button for="myfile" id="input-file-name-btn">Click to select a file:</button>
+                        <span id="input-file-name"></span>
+                    </div><br>
+                    <button id="upload_json_btn">Upload JSON</button>
+                </form>
             </div>
         </div>
         <div class="banner_right">

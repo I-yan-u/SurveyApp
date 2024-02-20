@@ -5,15 +5,19 @@
     <h3><b>Sign Up</b></h3>
     <img id="baseicon1" src="{{ url_for('static', filename='images/survey.svg') }}">
     <article class="signup_body">
-        <form action="/signup" method="post">
-            <input type="text" name="first-name" placeholder="First name" required><br>
-            <input type="text" name="last-name" placeholder="Last name" required><br>
-            <input type="email" name="email" placeholder="email address" required><br>
+        <form action="#" class="signupForm">
+            <input type="text" id="first_name" name="first-name" placeholder="First name" required><br>
+            <input type="text" id="last_name" name="last-name" placeholder="Last name" required><br>
+            <input type="email" id="email" name="email" placeholder="email address" required><br>
             <div class="pass">
                 <input id="inPass" class="acPass" type="password" name="password" placeholder="Password" required>
+                <img class="show_hide" id="show_hide1" src="{{ url_for('static', filename='images/show.svg') }}">
+                <img class="hide_show" id="hide_show1" src="{{ url_for('static', filename='images/hide.svg') }}">
             </div>
             <div class="pass">
                 <input id="inPass" class="confirmPass" type="password" name="confirm-password" placeholder="Confirm password" required>
+                <img class="show_hide" id="show_hide2" src="{{ url_for('static', filename='images/show.svg') }}">
+                <img class="hide_show" id="hide_show2" src="{{ url_for('static', filename='images/hide.svg') }}">
             </div><br>
 
             <label class="custom-radio">
@@ -28,13 +32,9 @@
                 Yes, I want to create.
             </label>
             <br><br>
-            <input type="submit" value="Sign Up">
-            <p id="signup">Already have an account? <a href="{{ url_for('login') }}">Sign In</a></p>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <p id="invalid_tag">*{{ messages[0] }}</p>
-                {% endif %}
-            {% endwith %}
+            <p id="invalid_tag">*Passwords don't match </p>
+            <input id="signup_submit" type="submit" value="Sign Up">
+            <div class="signup_lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </form>
     </article>
     <article class="l-s-welcome">
